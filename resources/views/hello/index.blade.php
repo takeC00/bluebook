@@ -12,7 +12,7 @@
     <p><?php echo $msg; ?></p>
     <p><?php echo $id; ?></p>
     <p><?php echo date("Y年n月j日"); ?></p>
-
+    <p><?php echo $hogeService ?></p>
     <p>Bladeファイルが優先される</p>
 </body>
 </html>
