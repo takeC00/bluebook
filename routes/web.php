@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\HogeController;
+use App\Http\Controllers\UpperLimitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,5 @@ Route::get('/', function () {
 Route::get('hello', [HelloController::class, 'index']);
 
 Route::get('hoge', [HogeController::class, 'index']);
+
+Route::get('limitcount', [UpperLimitController::class, 'show']);
