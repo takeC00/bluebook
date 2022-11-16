@@ -9,13 +9,11 @@
 </head>
 <body>
     <h2>Blade/Index</h2>
-
-    {{--<p><?php echo "ID={$id}"; ?></p>--}}
-    {{--<p><?php echo date("Y年n月j日"); ?></p>--}}
-    {{--<p><?php echo $hogeService ?></p>--}}
-    {{--<p>Bladeファイルが優先される</p>--}}
-
-    <p>{{$msg}}</p>
+    @if ($msg != '')
+    <p>こんにちは{{$msg}}さん。</p>
+    @else
+    <p>何か書いてください</p>
+    @endif
     <form method ='POST' action='/hello'>
         @csrf
         <input type='text' name='msg'>

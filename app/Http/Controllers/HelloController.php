@@ -13,25 +13,18 @@ class HelloController extends Controller
         $this->hoge = $hoge_service;
     }
 
-    public function index(Request $request)
+    public function index()
     {
         //$data = [
         //    'msg'=>'これはコントローラーから',
         //    'id'=>$request->id,
         //    'hogeService'=>$this->hoge->hoge()
         //];
-        $data = [
-            'msg' => 'お名前を入力してください'
-        ];
-        return view('hello.index', $data);
+        return view('hello.index', ['msg'=>'']);
     }
 
     public function post(Request $request)
     {
-        $msg = $request->msg;
-        $data = [
-            'msg' =>'こんにちは'.$msg.'さん',
-        ];
-        return view('hello.index', $data);
+        return view('hello.index', ['msg' => $request->msg]);
     }
 }
