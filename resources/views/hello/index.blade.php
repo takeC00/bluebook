@@ -9,10 +9,15 @@
 </head>
 <body>
     <h2>Blade/Index</h2>
-    <p><?php echo $msg; ?></p>
-    <p><?php echo $id; ?></p>
-    <p><?php echo date("Y年n月j日"); ?></p>
-
-    <p>Bladeファイルが優先される</p>
+    @if ($msg != '')
+    <p>こんにちは{{$msg}}さん。</p>
+    @else
+    <p>何か書いてください</p>
+    @endif
+    <form method ='POST' action='/hello'>
+        @csrf
+        <input type='text' name='msg'>
+        <input type='submit'>
+    </form>
 </body>
 </html>
