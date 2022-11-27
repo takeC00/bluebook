@@ -15,12 +15,8 @@ class HelloController extends Controller
 
     public function index()
     {
-        //$data = [
-        //    'msg'=>'これはコントローラーから',
-        //    'id'=>$request->id,
-        //    'hogeService'=>$this->hoge->hoge()
-        //];
-        return view('hello.index', ['msg'=>'']);
+        $data = ['one','two','three','four','five'];
+        return view('hello.index', ['data' => $data]);
     }
 
     public function post(Request $request)

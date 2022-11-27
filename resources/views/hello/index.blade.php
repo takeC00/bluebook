@@ -8,16 +8,19 @@
     </style>
 </head>
 <body>
-    <h2>Blade/Index</h2>
-    @if ($msg != '')
-    <p>こんにちは{{$msg}}さん。</p>
-    @else
-    <p>何か書いてください</p>
-    @endif
-    <form method ='POST' action='/hello'>
-        @csrf
-        <input type='text' name='msg'>
-        <input type='submit'>
-    </form>
+    <h1>Blade/Index</h1>
+    <P>ディレクティブの例</P>
+    <ol>
+        @php
+            $counter = 0;
+        @endphp
+        @while($counter < count($data))
+        <li>{{$data[$counter]}}</li>
+
+        @php
+            $counter++;
+        @endphp
+        @endwhile
+    </ol>
 </body>
 </html>

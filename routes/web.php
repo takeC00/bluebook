@@ -25,3 +25,4 @@ Route::post('hello', [HelloController::class, 'post']);
 Route::get('hoge', [HogeController::class, 'index']);
 
 Route::get('limitcount', [UpperLimitController::class, 'show']);
+Route::post('limitcount', [UpperLimitController::class, 'post']);
