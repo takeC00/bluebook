@@ -9,10 +9,10 @@
 
 @section('content')
     <p>本文</p>
+    <p>これは<middleware>google.com</middleware>へのリンクです</p>
+    <p>これは<middleware>yahoo.co.jp</middleware>へのリンクです</p>
+@endsection
 
-    <ul>
-        @each('components.item', $data, 'item')
-    </ul>
 @section('footer')
 copyright 2022 takeshi
 @endsection
