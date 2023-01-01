@@ -33,9 +33,5 @@ class LimitCountTest extends TestCase
         $resultb->b_result = '20';
         $resultb->c_result = '30';
         $resultb->save;
-
-        ('results',[
-
-        ]);
     }
 }
